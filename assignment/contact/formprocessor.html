@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Response</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <ul>
+    <li><a href="../home.html">
+        <ion-icon name="home-outline"></ion-icon>
+      </a></li>
+    <li><a href="../cart/register.html">
+        <ion-icon name="pricetag-outline"></ion-icon>
+      </a></li>
+    <li><a class="current" href="#">
+        <ion-icon name="call-outline"></ion-icon>
+      </a></li>
+    <li><a href="../cart/cart.html">
+        <ion-icon name="cart-outline">
+      </a></li>
+    <li><a id="theme-toggler" class="fas fa-moon"></a></li>
+    <li><a type="button" onclick="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </a></li>
+  </ul>
+  <article style="padding-top:69px;font-size:20px">
+    <h1>Your Feedback</h1>
+    <h3>Thank You For Submitting Your Feedback. We Greatly Appreaciate Your Opinions. Have A Nice Day!</h3>
+    <p>The date today is: <span id="date" class="blank"></span>
+    <p><span id="opinions"></span></p>
+    <p>We will contact you at <span id="contact" class="blank"></span> or write an email to <span id="email"
+        class="blank"></span>
+      to follow up on your feedback.
+    </p>
+  </article>
+  <script src="form.js"></script>
+  <script src="../site.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

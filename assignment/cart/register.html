@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="register.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <title>Login</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="../home.html"><ion-icon name="home-outline"></ion-icon></a></li>
+    <li><a class="current" href="../cart/register.html"><ion-icon name="pricetag-outline"></ion-icon></a></li>
+    <li><a href="../contact/contact.html"><ion-icon name="call-outline"></ion-icon></a></li>
+    <li><a href="cart.html"><ion-icon name="cart-outline"></a></li>
+    <li><a id="theme-toggler"class="fas fa-moon"></a></li>
+  </ul>
+  <h1>Login or Register</h1>
+
+  <div class="form-container">
+    <div class="form-btn">
+      <span onclick="login()">Login</span>
+      <span onclick="register()">Register</span>
+      <hr id="indicator">
+    </div>
+    <form id="loginform">
+      <input type="text" id="un" placeholder="Username"></input>
+      <input type="password" id="pw" placeholder="Password"></input>
+      <button onclick="authenticateUser()" class="btn">Login</button>
+    </form>
+    <form id="regform">
+      <input type="text" id="unnew" placeholder="Username"></input>
+      <input type="password" id="pwnew" placeholder="Password"></input>
+      <button onclick="createUser()" class="btn">Register</button>
+    </form>
+  </div>
+  <script src="../site.js"></script>
+  <script src="register.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

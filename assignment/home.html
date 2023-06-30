@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <style>
+    body,
+    html {
+      margin: 0;
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="splash" id="splash">
+    <img class="fadeIn" src="images/index.png" alt="zeon" width=150 height=150>
+  </div>
+  <!-- Nav Bar -->
+  <div>
+    <ul>
+      <li><a class="current" href="#">
+          <ion-icon name="home-outline"></ion-icon>
+        </a></li>
+      <li><a href="cart/register.html">
+          <ion-icon name="pricetag-outline"></ion-icon>
+        </a></li>
+      <li><a href="contact/contact.html">
+          <ion-icon name="call-outline"></ion-icon>
+        </a></li>
+      <li><a href="cart/cart.html">
+          <ion-icon name="cart-outline">
+        </a></li>
+      <li><a id="theme-toggler" class="fas fa-moon"></a></li>
+      <li><a type="button" onclick="logout()">
+          <ion-icon name="log-out-outline"></ion-icon>
+        </a></li>
+    </ul>
+
+  </div>
+
+  <!-- first image -->
+  <div class="bgimg-1">
+    <!-- scroll down to review -->
+    <div class="caption">
+      <span onClick="document.getElementById('start').scrollIntoView();" class="border button">
+        Review Of HGUC Sinanju
+      </span>
+    </div>
+  </div>
+
+  <!-- Add the canvas thing -->
+  <div class="section1" style="height: 590px;">
+    <canvas id="canvas" style="width: 100%; height: 100%;"></canvas>
+    <img id="img01"
+      src="https://c4.wallpaperflare.com/wallpaper/469/1000/3/anime-mechs-mobile-suit-gundam-unicorn-sinanju-mobile-suit-hd-wallpaper-preview.jpg">
+  </div>
+
+  <!-- Text to say what is it -->
+  <div id="infoBox">
+    <p>You can learn more about the suit in the video below.</p>
+    <a href="https://www.youtube.com/playlist?list=PLn9aHYYgIhb1Y0HbXFJPQoJKx6IZxYPaY" target="_blank">
+      <ion-icon style="padding-right:10px" name="musical-notes-outline"></ion-icon>
+      Or you can click here for some of its theme music.
+      <ion-icon style="padding-left:10px" name="musical-notes-outline"></ion-icon>
+    </a>
+  </div>
+
+
+  <!-- Video for Info -->
+  <div class="iframeContainer">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/qCYmkoyhzK4"></iframe>
+  </div>
+
+  <!-- Where the review starts -->
+
+  <!-- First image -->
+  <div id="start" class="bgimg-2">
+    <div class="caption">
+      <span class="border" style="font-size:25px;color: #f7f6f6;">BOX CONTENTS</span>
+    </div>
+  </div>
+
+  <!--Box Contents-->
+  <div id="textDiv">
+    <div class="row">
+      <div class="column">
+        <a href="images/instructions.jpeg" target="_blank">
+          <img class="kitImage" src="images/instructions.jpeg">
+        </a>
+        <p>1 Instruction sheet</p>
+      </div>
+      <div class="column">
+        <a href="https://rainingplastic.files.wordpress.com/2011/12/img_0525.jpg" target="_blank">
+          <img class="kitImage" src="https://rainingplastic.files.wordpress.com/2011/12/img_0525.jpg">
+        </a>
+        <p>10 Runners</p>
+      </div>
+      <div class="column">
+        <a href="images/stickers.jpeg" target="_blank">
+          <img class="kitImage" src="images/stickers.jpeg">
+        </a>
+        <p>1 Sticker Sheet</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Second image -->
+  <div id="start" class="bgimg-3">
+    <div class="caption">
+      <span class="border" style="font-size:25px;color: #f7f6f6;">DESIGN</span>
+    </div>
+  </div>
+
+
+  <!--Design-->
+  <div id="textDiv">
+    <div class="row">
+      <div class="column">
+        <a href="images/front.jpeg" target="_blank">
+          <img class="kitImage" src="images/front.jpeg">
+        </a>
+        <p>Front view.</p>
+      </div>
+      <div class="column">
+        <a href="images/back.jpeg" target="_blank">
+          <img class="kitImage" src="images/back.jpeg">
+        </a>
+        <p>Back view, nice thrusters.</p>
+      </div>
+      <div class="column">
+        <a href="images/top.jpeg" target="_blank">
+          <img class="kitImage" src="images/top.jpeg">
+        </a>
+        <p>Top view.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/headClose.jpeg" target="_blank">
+          <img class="kitImage" src="images/headClose.jpeg">
+        </a>
+        <p>Close Up.</p>
+      </div>
+      <div class="column">
+        <a href="images/chest.jpeg" target="_blank">
+          <img class="kitImage" src="images/chest.jpeg">
+        </a>
+        <p>Sleeve Iconography on the chest.</p>
+      </div>
+      <div class="column">
+        <a href="images/armSleeve.jpeg" target="_blank">
+          <img class="kitImage" src="images/armSleeve.jpeg">
+        </a>
+        <p>Arm Sleeve Iconography.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/forearm.jpeg" target="_blank">
+          <img class="kitImage" src="images/forearm.jpeg">
+        </a>
+        <p>Foreman with more iconography.</p>
+      </div>
+      <div class="column">
+        <a href="images/waist.jpeg" target="_blank">
+          <img class="kitImage" src="images/waist.jpeg">
+        </a>
+        <p>Waist. It has the familiar hosing of zeon mobile suits.</p>
+      </div>
+      <div class="column">
+        <a href="images/legFront.jpeg" target="_blank">
+          <img class="kitImage" src="images/legFront.jpeg">
+        </a>
+        <p>Leg looks very nice. Yellow vents and nice looking knees.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/legThruster.jpeg" target="_blank">
+          <img class="kitImage" src="images/legThruster.jpeg">
+        </a>
+        <p>Leg Thrusters</p>
+      </div>
+      <div class="column">
+        <a href="images/height.jpeg" target="_blank">
+          <img class="kitImage" src="images/height.jpeg">
+        </a>
+        <p>It's pretty big.</p>
+      </div>
+      <div class="column">
+        <a href="images/bottom.jpeg" target="_blank">
+          <img class="kitImage" src="images/bottom.jpeg">
+        </a>
+        <p>Bottom part. Feet has good detail even though no one is going to see it. It also has a stand connector port
+          in
+          betweent the legs.</p>
+      </div>
+    </div>
+    <p>The kit looks pretty good. I tried painting the sleeve iconography, which you can use stickers for, but I suck at
+      it so there lmao.
+      But if you are a skilled painter you would be able to make this kit shine. However, the sticker sheet can do the
+      job just fine to be honest. You can spray a matte coat too if you like. Many cool details can be found, like
+      exhaust ports and mechanical features. Fantatstic design overall, but I'm a little biased here 'cuz this is my
+      favourite mobile suit lol :p.</p>
+  </div>
+
+
+  <!--Third Image -->
+  <div class="bgimg-4">
+    <div class="caption">
+      <span class="border" style="font-size:25px;color: #f7f6f6;">ACCESSORIES</span>
+    </div>
+  </div>
+
+  <!-- Accessories-->
+  <div id="textDiv">
+    <div class="row">
+      <div class="column">
+        <a href="images/beams.jpeg" target="_blank">
+          <img class="kitImage" src="images/beams.jpeg">
+        </a>
+        <p>Beam Sabers</p>
+      </div>
+      <div class="column">
+        <a href="images/beamt.jpeg" target="_blank">
+          <img class="kitImage" src="images/beamt.jpeg">
+        </a>
+        <p>Beam Tomahawk</p>
+      </div>
+      <div class="column">
+        <a href="images/rifle.jpeg" target="_blank">
+          <img class="kitImage" src="images/rifle.jpeg">
+        </a>
+        <p>Beam Rifle</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/grenade.jpeg" target="_blank">
+          <img class="kitImage" src="images/grenade.jpeg">
+        </a>
+        <p>Grenade Launcher</p>
+      </div>
+      <div class="column">
+        <a href="images/shield.jpeg" target="_blank">
+          <img class="kitImage" src="images/shield.jpeg">
+        </a>
+        <p>Shield and shield connector</p>
+      </div>
+      <div class="column">
+        <a href="images/hands.jpeg" target="_blank">
+          <img class="kitImage" src="images/hands.jpeg">
+        </a>
+        <p>Hands <br>
+          One pair of fists, one pair of holding hands, and one right trigger finger hand
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/attach.jpeg" target="_blank">
+          <img class="kitImage" src="images/attach.jpeg" alt="">
+        </a>
+        <p>You can also attach the grenade laucher and beam tomahawk to the shield</p>
+      </div>
+      <div class="column">
+        <a href="images/connect.jpeg" target="_blank">
+          <img class="kitImage" src="images/connect.jpeg" alt="">
+        </a>
+        <p>Connect the shield to the arm</p>
+      </div>
+      <div class="column">
+        <a href="images/double.jpeg" target="_blank">
+          <img class="kitImage" src="images/double.jpeg" alt="">
+        </a>
+        <p>You can attach the beam tomahawk like this too</p>
+      </div>
+      <div class="column">
+        <a href="images/rifleWgrenade.jpeg" target="_blank">
+          <img class="kitImage" src="images/rifleWgrenade.jpeg" alt="">
+        </a>
+        <p>You can attach the grenade launcher to the beam rifle</p>
+      </div>
+    </div>
+    <p>
+      Accessories are plenty, but it is a shame it did not come with its bazooka. If it did it probably is going to be
+      more expensive, but oh well. Overall, good variety and a lot of play options here.
+    </p>
+  </div>
+
+  <!--Fourth Image -->
+  <div class="bgimg-5">
+    <div class="caption">
+      <span class="border" style="font-size:25px;color: #f7f6f6;">ARTICULATION</span>
+    </div>
+  </div>
+
+  <!-- Articulation -->
+  <div id="textDiv">
+    <div class="row">
+      <div class="column">
+        <a href="images/head.jpeg" target="_blank">
+          <img src="images/head.jpeg" class="kitImage">
+        </a>
+        <p>Head can go side to side</p>
+      </div>
+      <div class="column">
+        <a href="images/shoulderPad.jpeg" target="_blank">
+          <img src="images/shoulderPad.jpeg" class="kitImage">
+        </a>
+        <p>Shoulder pad can move up</p>
+      </div>
+      <div class="column">
+        <a href="images/armUp.jpeg" target="_blank">
+          <img src="images/armUp.jpeg" class="kitImage">
+        </a>
+        <p>Arm can go up this far</p>
+      </div>
+      <div class="column">
+        <a href="images/armRotation.jpeg" target="_blank">
+          <img src="images/armRotation.jpeg" class="kitImage">
+        </a>
+        <p>Shoulder can rotate 360</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/armBend.jpeg" target="_blank">
+          <img src="images/armBend.jpeg" class="kitImage">
+        </a>
+        <p>Arm bend about 90 degrees</p>
+      </div>
+      <div class="column">
+        <a href="images/wristRotate.jpeg" target="_blank">
+          <img src="images/wristRotate.jpeg" class="kitImage">
+        </a>
+        <p>Wrist rotate 360</p>
+      </div>
+      <div class="column">
+        <a href="images/waistRotate.jpeg" target="_blank">
+          <img src="images/waistRotate.jpeg" class="kitImage">
+        </a>
+        <p>Waist rotate 360</p>
+      </div>
+      <div class="column">
+        <a href="images/skirtUp.jpeg" target="_blank">
+          <img src="images/skirtUp.jpeg" class="kitImage">
+        </a>
+        <p>Skirts all move up</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/legFB.jpeg" target="_blank">
+          <img src="images/legFB.jpeg" class="kitImage">
+        </a>
+        <p>Leg can go and back this far</p>
+      </div>
+      <div class="column">
+        <a href="images/split.jpeg" target="_blank">
+          <img src="images/split.jpeg" class="kitImage">
+        </a>
+        <p>Leg go out sideways this far</p>
+      </div>
+      <div class="column">
+        <a href="images/legBend.jpeg" target="_blank">
+          <img src="images/legBend.jpeg" class="kitImage">
+        </a>
+        <p>Leg bend about 180 degrees</p>
+      </div>
+      <div class="column">
+        <a href="images/pivot.jpeg" target="_blank">
+          <img src="images/pivot.jpeg" class="kitImage">
+        </a>
+        <p>Feet pivot</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/feetUp.jpeg" target="_blank">
+          <img src="images/feetUp.jpeg" class="kitImage">
+        </a>
+        <p>Feet point up</p>
+      </div>
+      <div class="column">
+        <a href="images/feetDown.jpeg" target="_blank">
+          <img src="images/feetDown.jpeg" class="kitImage">
+        </a>
+        <p>Feet point down</p>
+      </div>
+      <div class="column">
+        <a href="images/thrusterOut.jpeg" target="_blank">
+          <img src="images/thrusterOut.jpeg" class="kitImage">
+        </a>
+        <p>Thrusters can move out</p>
+      </div>
+      <div class="column">
+        <a href="images/thrusterIn.jpeg" target="_blank">
+          <img src="images/thrusterIn.jpeg" class="kitImage">
+        </a>
+        <p>Thrusters can move in</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="images/thrusterFlap.jpeg" target="_blank">
+          <img src="images/thrusterFlap.jpeg" class="kitImage">
+        </a>
+        <p>These can open up</p>
+      </div>
+      <div class="column">
+        <a href="images/thrusterUD.jpeg" target="_blank">
+          <img src="images/thrusterUD.jpeg" class="kitImage">
+        </a>
+        <p>Thrusters can go up and down</p>
+      </div>
+      <div class="column">
+        <a href="images/fuel.jpeg" target="_blank">
+          <img src="images/fuel.jpeg" class="kitImage">
+        </a>
+        <p>Fuel tanks are on a ball joint</p>
+      </div>
+    </div>
+    <p>Overall, articulation is pretty good, but there are some places like the arm, which could benefit from being
+      double jointed.</p>
+  </div>
+
+  <!--Fifth Image -->
+  <div class="bgimg-6">
+    <div class="caption">
+      <span class="border" style="font-size:25px;color: #f7f6f6;">Final Thoughts</span>
+    </div>
+  </div>
+
+  <!-- Conclusion -->
+  <div style="position:relative;">
+    <div id="finalDiv">
+      <p>
+        <span class="specifics">Design:</span> 10/10 - Even with my shoddy painting, this model still look absolutely
+        stunning.
+        <br>
+        <br>
+
+        <span class="specifics">Articulation:</span> 6/10 - It is not that great. However, it can still get into many
+        dynamic action poses, so it is not that bad. It would benefit if all the joints had double points in them, but
+        it is probably too costly to do so.
+        <br>
+        <br>
+
+        <span class="specifics">Play factor:</span> 9/10 - The kit is as solid as a rock. It is not as flimsy as some
+        other kits, and the waist joint is not so tight that it will break off like the MG version. You can play with it
+        however you like and it will not break apart instantly. Its joints can hold up any pose you like and can
+        definitely withstand the test of time.
+        <br>
+        <br>
+
+        <span class="specifics">Build:</span> 8/10 - It is a shame that the gold parts are not separate pieces
+        but are stickers. While the stickers are all well and good, painting it would definitely make it look much
+        better. The rest of the building process is very simple and straight forward, and there are even clever
+        engineering in some areas.
+        <br>
+        <br>
+
+        <span class="specifics">Accessories:</span> 8/10 – Good variety of accessories are included, however could be
+        improved with a couple more expressive hands or perhaps a bazooka.
+        <br>
+        <br>
+
+        <span class="specifics">Overall:</span> 10/10 – Good looks, good details. I can't see why you would NOT buy this
+        unless you are have the MG version. This kit is extremely affordable, at about ¥2,600 ! So if you
+        haven’t got a Sinanju, get this. But even if you have the MG version, you could always buy another right? :p
+      </p>
+      <p style="text-align: center;">
+        After reading this review and would like to buy one for yourself, click the button
+        below to purchase a kit!
+      </p>
+    </div>
+  </div>
+
+  <!-- Last Image -->
+  <div class="bgimg-1">
+    <div class="caption">
+      <span class="border button" style="font-size:25px;color: #f7f6f6;">
+        <a class="lastLink" href="cart/register.html">
+          Buy Here
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <script src="site.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <!-- star thing -->
+  <script src="stars.js"></script>
+</body>
+
+</html>

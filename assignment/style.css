@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+  --primary-bg-color: #eee;
+  --secondary-bg-color: #fff;
+  ---primary-text-color: #666;
+  --secondary-text-color: #000;
+  --third-bg-color: #fff2f3;
+  --fourth-bg-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 110%;
+  margin: 0;
+  padding: 0;
+}
+
+/*change theme*/
+body.active {
+  --primary-bg-color: #222;
+  --secondary-bg-color: #333;
+  --primary-text-color: #fff;
+  --secondary-text-color: #eee;
+  --third-bg-color: #8A8A8A;
+  --fourth-bg-color: rgba(255, 255, 255, 0.5);
+}
+
+ion-icon {
+  font-size: 27px;
+  margin: 3px;
+}
+
+#theme-toggler {
+  margin-top: 4px;
+  font-size: 24px;
+  background: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+}
+
+.socials:hover {
+  font-size: 120%;
+}
+
+/*nav bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--secondary-bg-color);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: var(--secondary-text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--primary-bg-color);
+}
+
+li a.current {
+  background-color: var(--third-bg-color);
+}
+
+/*welcome screen*/
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 200;
+  color: white;
+  text-align: center;
+  line-height: 120vh;
+}
+
+.splash.display-none {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: -10;
+  color: white;
+  text-align: center;
+  line-height: 120vh;
+  transition: all 0.3s;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fade 1s ease-in forwards
+}

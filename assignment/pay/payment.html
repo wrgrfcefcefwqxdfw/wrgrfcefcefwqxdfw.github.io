@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Payment</title>
+
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="../home.html">
+                <ion-icon name="home-outline"></ion-icon>
+            </a></li>
+        <li><a href="../cart/register.html">
+                <ion-icon name="pricetag-outline"></ion-icon>
+            </a></li>
+        <li><a href="../contact/contact.html">
+                <ion-icon name="call-outline"></ion-icon>
+            </a></li>
+        <li><a href="../cart/cart.html">
+                <ion-icon name="cart-outline">
+            </a></li>
+        <li><a id="theme-toggler" class="fas fa-moon"></a></li>
+        <li><a type="button" onclick="logout()">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </a></li>
+    </ul>
+
+    <div class="container">
+        <form action="confirm.html" method="get">
+            <div class="row">
+                <div class="column">
+                    <h3>BILLING ADDRESS</h3>
+                    <div class="inputBox">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Quandale Dingle">
+                    </div>
+                    <div class="inputBox">
+                        <span>Email :</span>
+                        <input type="email" placeholder="ilovetehpeng@gmail.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Orchard Rd, Singapore">
+                    </div>
+                    <div class="inputBox">
+                        <span>Country :</span>
+                        <input type="text" placeholder="Singapore">
+                    </div>
+
+                    <div class="lowest">
+                        <div class="inputBox">
+                            <span>City :</span>
+                            <input type="text" placeholder="Yishun">
+                        </div>
+                        <div class="inputBox">
+                            <span>Zip Code :</span>
+                            <input type="text" placeholder="699 420">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>PAYMENT</h3>
+                    <div class="inputBox">
+                        <span>Cards Accepted :</span>
+                        <img src="../images/card_img.png" id="cardsImage">
+                    </div>
+                    <div class="inputBox">
+                        <span>Name On Card :</span>
+                        <input type="text" placeholder="Mr Mcdonalds">
+                    </div>
+                    <div class="inputBox">
+                        <span>Credit Card Number :</span>
+                        <input type="text" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputBox">
+                        <span>Exp Month :</span>
+                        <select>
+                            <option value=''>--Select Month--</option>
+                            <option selected value='1'>Janaury</option>
+                            <option value='2'>February</option>
+                            <option value='3'>March</option>
+                            <option value='4'>April</option>
+                            <option value='5'>May</option>
+                            <option value='6'>June</option>
+                            <option value='7'>July</option>
+                            <option value='8'>August</option>
+                            <option value='9'>September</option>
+                            <option value='10'>October</option>
+                            <option value='11'>November</option>
+                            <option value='12'>December</option>
+                        </select>
+                    </div>
+                    <div class="lowest">
+                        <div class="inputBox">
+                            <span>Exp Year :</span>
+                            <input min="2022" type="number" placeholder="2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">
+                Proceed To Checkout
+            </button>
+        </form>
+    </div>
+    <script src="../site.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

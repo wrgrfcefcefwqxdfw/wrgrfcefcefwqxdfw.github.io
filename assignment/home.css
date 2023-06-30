@@ -1,0 +1,164 @@
+/* Image parallax */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5,
+.bgimg-6 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: 10% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* image sources */
+.bgimg-1 {
+    background-image: url("https://cdn.donmai.us/sample/1b/9c/__sinanju_gundam_and_1_more_drawn_by_akamiho__sample-1b9c294ee0fd4b4781616a1ea1494dfd.jpg");
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("https://img.freepik.com/free-psd/opened-paper-box-mockup_58466-14559.jpg?w=900&t=st=1659321701~exp=1659322301~hmac=ce086a2757694595db0e08c6c14548626d10bd94858b0c34826f6eeac1fdee86");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("https://images.pexels.com/photos/1113839/pexels-photo-1113839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    min-height: 400px;
+}
+
+.bgimg-4 {
+    background-image: url("https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    min-height: 400px;
+}
+
+.bgimg-5 {
+    background-image: url("https://images.pexels.com/photos/7219403/pexels-photo-7219403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    min-height: 400px;
+}
+
+.bgimg-6 {
+    background-image: url("https://images.pexels.com/photos/1111372/pexels-photo-1111372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    min-height: 400px;
+}
+
+
+
+#img01 {
+    position: absolute;
+    margin: auto;
+    top: 140%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 40%;
+    animation: orbit 3s linear infinite;
+}
+
+/* spin */
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+
+/* Small Box Text */
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    border-radius: 20px;
+
+}
+
+.lastLink {
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px 0 white;
+}
+
+
+/* Image */
+.kitImage {
+    width: 250px;
+    height: 250px;
+}
+
+/* division styling */
+#infoBox {
+    color: #ddd;
+    background-color: #282E34;
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
+
+#infoBox a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#textDiv {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+#finalDiv {
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+/* iframe */
+.iframeContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.specifics {
+    text-decoration: underline;
+}

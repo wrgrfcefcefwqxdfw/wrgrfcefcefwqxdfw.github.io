@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="confirm.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Confirmation</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="../home.html">
+                <ion-icon name="home-outline"></ion-icon>
+            </a></li>
+        <li><a href="../cart/register.html">
+                <ion-icon name="pricetag-outline"></ion-icon>
+            </a></li>
+        <li><a href="../contact/contact.html">
+                <ion-icon name="call-outline"></ion-icon>
+            </a></li>
+        <li><a href="../cart/cart.html">
+                <ion-icon name="cart-outline">
+            </a></li>
+        <li><a id="theme-toggler" class="fas fa-moon"></a></li>
+        <li><a type="button" onclick="logout()">
+                <ion-icon name="log-out-outline"></ion-icon>
+            </a></li>
+    </ul>
+
+    <div class="check"></div>
+    <h1>Payment Successful! Thanks for your order!</h1>
+    <h2>Total Payment Amount</h2>
+    <h1 id="totalPrice"></h1>
+    <h2>Order No.</h2>
+    <h3 id='rnumber'></h3>
+    <h3>
+        We appreciate your business!
+        If you have any questions, please email
+        <a href="mailto:orders@example.com">thissite@gmail.com</a>.
+        <br>
+    </h3>
+    <button class="redirect">
+        <a href="../home.html">Back to Home</a>
+    </button>
+    <button class="redirect">
+        <a href="../cart/buy.html">Continue to Buy</a>
+    </button>
+    <script>
+        total = (parseFloat(localStorage.getItem("totalCost")) * 1.07).toFixed(2);
+        document.getElementById('totalPrice').innerText = `$${total}`
+        number = (Math.random() * 1000) * (Math.random() * 1000) * (Math.random() * 1000);
+        number = Math.floor(number)
+        document.getElementById('rnumber').innerText = number
+    </script>
+    <script src="../site.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

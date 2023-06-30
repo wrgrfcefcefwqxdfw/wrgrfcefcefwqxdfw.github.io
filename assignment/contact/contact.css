@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+/*form*/
+fieldset {
+  width: 250px;
+  margin: auto;
+}
+
+.field {
+  text-align: center;
+  width: 230px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px var(--third-bg-color);
+  margin-bottom: 22px;
+  transition: 0.3s
+}
+
+.field:hover {
+  background-color: var(--fourth-bg-color);
+}
+
+.field:focus {
+  background-color: #fff;
+  border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+.sub {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.socials {
+  transition: all 0.2s linear;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <title>Contact</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="../home.html"><ion-icon name="home-outline"></ion-icon></a></li>
+    <li><a href="../cart/register.html"><ion-icon name="pricetag-outline"></ion-icon></a></li>
+    <li><a class="current" href="#"><ion-icon name="call-outline"></ion-icon></a></li>
+    <li><a href="../cart/cart.html"><ion-icon name="cart-outline"></a></li>
+    <li><a id="theme-toggler"class="fas fa-moon"></a></li>
+    <li><a type="button" onclick="logout()"><ion-icon name="log-out-outline"></ion-icon></a></li>
+  </ul>
+  <h1>Contact Me</h1>
+  <nav>
+    <a class="socials" href="mailto:222757H@mymail.nyp.edu.sg">Email |</a>
+    <a class="socials" href="https://fakeupdate.net/wnc/" target="_blank">Instagram |</a>
+    <a class="socials" href="https://www.youtube.com/channel/UCe5BV1cGCEc_HBtPp67n0PQ" target="_blank">Youtube |</a>
+    <a class="socials" href="https://www.github.com" target="_blank">GitHub</a>
+    <p>Phone Number: 99912629</p>
+  </nav>
+  <h1>Feedback</h1>
+  <form action="formprocessor.html" method="get">
+    <fieldset>
+      <legend>Your Opinions</legend>
+      <label for="mail"></label>
+      <input class="field" placeholder="Your Name" type="text" name="name" id="name" required>
+      <br>
+      <br>
+      <label for="mail"></label>
+      <input class="field" placeholder="Email Address" type="email" name="email" id="mail" required>
+      <br>
+      <br>
+      <label for="phone"></label>
+      <input class="field" placeholder="Contact Number" type="tel" pattern="[0-9]{8}" title="8 digits telephone number" name="contact" id="phone" required>
+      <br>
+      <p>Your Review Of Website</p>
+      <textarea class="field"id="opinions" name="opinions" rows="4" cols="50"></textarea>
+    </fieldset>
+    <button class="sub" type="submit" name="button">SUBMIT</button>
+  </form>
+  <script src="../site.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

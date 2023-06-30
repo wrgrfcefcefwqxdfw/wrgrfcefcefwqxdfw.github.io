@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="buy.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <title>Buy</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="../home.html">
+        <ion-icon name="home-outline"></ion-icon>
+      </a></li>
+    <li><a class="current" href="../cart/register.html">
+        <ion-icon name="pricetag-outline"></ion-icon>
+      </a></li>
+    <li><a href="../contact/contact.html">
+        <ion-icon name="call-outline"></ion-icon>
+      </a></li>
+    <li><a id="amount" data-count="0" href="cart.html">
+        <ion-icon name="cart-outline">
+      </a></li>
+    <li><a id="theme-toggler" class="fas fa-moon"></a></li>
+    <li><a type="button" onclick="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </a></li>
+  </ul>
+  <h1>You can buy things here</h1>
+  <h3>Limited to 5 per person</h3>
+  <div class="small-container single-product">
+    <div class="container">
+      <div>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="../images/hgsinanju.webp" width="70%" class="zoomIn" /></div>
+            <div class="swiper-slide"><img
+                src="https://bbts1.azureedge.net/images/p/full/2020/10/a2ea3518-d093-4af9-8416-3d23b167508a.jpg"
+                height="500px" class="zoomIn" />
+            </div>
+            <div class="swiper-slide"><img src="../images/backshot.jpeg" height="500px" class="zoomIn" /></div>
+            <div class="swiper-slide"><img src="../images/dynamic.jpeg" height="500px" class="zoomIn" /></div>
+
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+      </div>
+      <div>
+        <h1>1/144 HGUC MSN-06S SINANJU</h1>
+        <h4 class="price-product">$31.30 SGD</h4>
+        <!-- <input type="number" value="1" min="0"> -->
+        <select class="item-number" id="item-number">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="add-cart">Add To Cart</button>
+
+        <div class="details">
+          <h3>Product Details</h3>
+          <p>Based on the Mobile Suit Gundam Unicorn anime, you can now get the MSN-06S Sinanju in 1/144 scale. Snap fit
+            assembly, no glue required. <br>
+            Click <a href="../home.html"><span style="text-decoration:underline">here</span>
+            </a> to learn more.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="../site.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="buy.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
